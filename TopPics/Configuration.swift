@@ -10,7 +10,7 @@ import Foundation
 struct server{
     struct url
     {
-     static let imgurUrl = ""
+     static let imgurUrl = "https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q="
     }
     struct endPoints
     {
