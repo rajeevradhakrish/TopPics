@@ -24,15 +24,15 @@ struct ImgurModel: Codable {
     let coverWidth, coverHeight: Int?
     let accountURL: String?
     let accountID: Int?
-    let privacy: Privacy?
-    let layout: Layout?
+    let privacy: String?
+    let layout: String?
     let views: Int?
     let link: String?
     let ups, downs, points, score: Int?
     let isAlbum: Bool?
     let vote: String?
     let favorite, nsfw: Bool?
-    let section: Section?
+    let section: String?
     let commentCount, favoriteCount: Int?
     let topic: String?
     let topicID: Int?
@@ -43,7 +43,7 @@ struct ImgurModel: Codable {
     let adURL: String?
     let inMostViral, includeAlbumAds: Bool?
     let images: [Image]?
-    let type: TypeEnum?
+    let type: String?
     let animated: Bool?
     let width, height, size, bandwidth: Int?
     let hasSound: Bool?
@@ -100,7 +100,7 @@ struct Image: Codable {
     let title: String?
     let imageDescription: String?
     let datetime: Int?
-    let type: TypeEnum?
+    let type: String?
     let animated: Bool?
     let width, height, size, views: Int?
     let bandwidth: Int?
@@ -144,32 +144,10 @@ struct Image: Codable {
 
 // MARK: - Processing
 struct Processing: Codable {
-    let status: Status?
+    let status: String?
 }
 
-enum Status: String, Codable {
-    case completed = "completed"
-}
 
-enum TypeEnum: String, Codable {
-    case imageJPEG = "image/jpeg"
-    case imagePNG = "image/png"
-    case videoMp4 = "video/mp4"
-}
-
-enum Layout: String, Codable {
-    case blog = "blog"
-}
-
-enum Privacy: String, Codable {
-    case hidden = "hidden"
-}
-
-enum Section: String, Codable {
-    case cats = "cats"
-    case empty = ""
-    case uNewAdvantage4796 = "u_New-Advantage-4796"
-}
 
 // MARK: - Tag
 struct Tag: Codable {
@@ -179,7 +157,7 @@ struct Tag: Codable {
     let backgroundHash: String?
     let thumbnailHash, accent: String?
     let backgroundIsAnimated, thumbnailIsAnimated, isPromoted: Bool?
-    let tagDescription: Description?
+    let tagDescription: String?
     let logoHash, logoDestinationURL: String?
     let descriptionAnnotations: DescriptionAnnotations?
 

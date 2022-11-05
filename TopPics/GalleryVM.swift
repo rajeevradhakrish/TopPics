@@ -8,8 +8,16 @@
 import Foundation
 import UIKit
 
+// Enum to manage type of cell
+
+enum CellType {
+case list,grid
+}
+//MARK: View model for gallery page
+
 class GalleryVM
 {
+    
     //MARK: Array to store the required dayta for the cell
     
     var imgurArr = [ImgurCellModel]()
@@ -18,7 +26,8 @@ class GalleryVM
     
     func fetchAPI(VC:UIViewController,searchStr:String, completion:@escaping ()->())
     {
-        NetworkCall(data: [:], headers: [:], url: server.url.imgurUrl + searchStr , service: .posts, method: .get, isJSONRequest: false).executeQuery(){[weak self]
+        let authorization = ["Authorization":server.profile.authorization]
+        NetworkCall(data: [:], headers: authorization, url: server.url.imgurUrl + searchStr , service: .posts, method: .get, isJSONRequest: false).executeQuery(){[weak self]
             (result: Result<ImgurResponse,Error>) in
             //ActivityIndicator.shared.removeLoader()
             guard let  sSelf = self else {return}
@@ -26,7 +35,7 @@ class GalleryVM
             case .success(let response):
                 if let imgUrDataTemp = response.data
                 {
-                    sSelf.imgurArr = imgUrDataTemp.map({ImgurCellModel(id: $0.id, title: $0.title, datetime: $0.datetime, imagesCount: $0.imagesCount, imageUrl: $0.images?.first?.gifv ?? "")})
+                    sSelf.imgurArr = imgUrDataTemp.map({ImgurCellModel(id: $0.id, title: $0.title, datetime: $0.datetime, imagesCount: $0.imagesCount, imageUrl: $0.images?.first?.link ?? "")})
                 }
                 
                 completion()
@@ -39,5 +48,22 @@ class GalleryVM
         }
     }
     
+    
+   //MARK: Get required cell for grid/List
+    
+    func getImgUrCell(collection:UICollectionView, index:IndexPath,type:CellType)->UICollectionViewCell
+    {
+        if type == .grid,let cell = collection.dequeueReusableCell(withReuseIdentifier: ImgUrGridCell.cellIdentifier, for: index) as? ImgUrGridCell
+        {
+            cell.setUPCell(item: imgurArr[index.row])
+            return cell
+        }
+        else if type == .list,let cell = collection.dequeueReusableCell(withReuseIdentifier: ImgUrListCell.cellIdentifier, for: index) as? ImgUrListCell
+        {
+            cell.setUPCell(item: imgurArr[index.row])
+            return cell
+        }
+        return UICollectionViewCell()
+    }
     
 }
