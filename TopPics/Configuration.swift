@@ -30,6 +30,6 @@ struct theme
 {
     struct colors
     {
-        static let themeMain = ""
+        static let themeMain = "377D9D"
     }
 }

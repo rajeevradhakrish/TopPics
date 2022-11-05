@@ -29,6 +29,13 @@ class GalleryVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        setUPGridListButton()
+        loadSearchData()
+    }
+    
+    func loadSearchData()
+    {
         galleryVM.fetchAPI(VC: self, searchStr: "cat", completion: {[weak self] in
             guard let sSelf = self else {return}
             ExecuteOnMain {
@@ -37,6 +44,20 @@ class GalleryVC: UIViewController {
         })
     }
     
+    func setUPGridListButton()
+    {
+        let gridListButton = UIButton()
+        gridListButton.setImage(UIImage(named: "list"), for: .normal)
+        gridListButton.setImage(UIImage(named: "grid"), for: .selected)
+        gridListButton.addTarget(self, action: #selector(toggleGridList(sender:)), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: gridListButton)
+    }
+    
+    @objc func toggleGridList(sender:UIButton)
+    {
+        sender.isSelected = !sender.isSelected
+        currentCellType = sender.isSelected ? .grid : .list
+    }
     
 }
 
@@ -48,7 +69,7 @@ extension GalleryVC:UICollectionViewDataSource,UICollectionViewDelegate
     {
         return galleryVM.imgurArr.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         galleryVM.getImgUrCell(collection: collectionView, index: indexPath, type: currentCellType)
@@ -60,11 +81,11 @@ extension GalleryVC:UICollectionViewDataSource,UICollectionViewDelegate
 extension GalleryVC:UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:(collectionView.frame.width-20)/3 , height: ((collectionView.frame.width-15)/3)*1.4)
+        return currentCellType == .list ? CGSize(width:(collectionView.frame.width-20)/3 , height: ((collectionView.frame.width-15)/3)*1.4) : CGSize(width:(collectionView.frame.width-20) , height: ((collectionView.frame.width-20)/2.77))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+         return currentCellType == .list ?  5 : 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -72,7 +93,7 @@ extension GalleryVC:UICollectionViewDelegateFlowLayout
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        return currentCellType == .list ? UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5) : UIEdgeInsets(top: 10, left: 10, bottom: 5, right: 10)
     }
     
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TopPic-->
+        <!--TopPics-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GalleryVC" customModule="TopPics" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,20 +38,20 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-sh-2cG">
                                                     <rect key="frame" x="0.0" y="0.0" width="137" height="133"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txZ-lp-kEW">
-                                                    <rect key="frame" x="149" y="0.0" width="204" height="35"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txZ-lp-kEW">
+                                                    <rect key="frame" x="149" y="0.0" width="204" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-rb-xqp">
-                                                    <rect key="frame" x="149" y="43" width="164" height="21"/>
+                                                    <rect key="frame" x="149" y="73" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-JW-7jl">
-                                                    <rect key="frame" x="149" y="71" width="164" height="21"/>
+                                                    <rect key="frame" x="149" y="101" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                     <nil key="highlightedColor"/>
@@ -64,14 +64,14 @@
                                                 <constraint firstItem="5Bu-rb-xqp" firstAttribute="height" secondItem="Xo2-qs-HSq" secondAttribute="height" multiplier="0.157895" id="64z-2I-pqg"/>
                                                 <constraint firstItem="E1g-sh-2cG" firstAttribute="height" secondItem="Xo2-qs-HSq" secondAttribute="height" id="7rP-Aj-H6B"/>
                                                 <constraint firstItem="5Bu-rb-xqp" firstAttribute="width" secondItem="Xo2-qs-HSq" secondAttribute="width" multiplier="0.445652" id="B6s-T9-hPA"/>
-                                                <constraint firstItem="txZ-lp-kEW" firstAttribute="height" secondItem="Xo2-qs-HSq" secondAttribute="height" multiplier="0.263158" id="Q25-7w-1ae"/>
+                                                <constraint firstItem="txZ-lp-kEW" firstAttribute="height" secondItem="Xo2-qs-HSq" secondAttribute="height" multiplier="0.263158" constant="30" id="Q25-7w-1ae"/>
                                                 <constraint firstItem="E1g-sh-2cG" firstAttribute="top" secondItem="Xo2-qs-HSq" secondAttribute="top" id="Qce-Lz-Dj5"/>
                                                 <constraint firstItem="WFd-JW-7jl" firstAttribute="leading" secondItem="5Bu-rb-xqp" secondAttribute="leading" id="XWK-Sf-4YI"/>
                                                 <constraint firstItem="E1g-sh-2cG" firstAttribute="leading" secondItem="Xo2-qs-HSq" secondAttribute="leading" id="ZpZ-wC-JrH"/>
                                                 <constraint firstAttribute="bottom" secondItem="E1g-sh-2cG" secondAttribute="bottom" id="akk-Q4-ITb"/>
                                                 <constraint firstItem="E1g-sh-2cG" firstAttribute="width" secondItem="Xo2-qs-HSq" secondAttribute="width" multiplier="0.372283" id="biU-fK-RYq"/>
                                                 <constraint firstItem="WFd-JW-7jl" firstAttribute="top" secondItem="5Bu-rb-xqp" secondAttribute="bottom" constant="7" id="bv1-WF-O2U"/>
-                                                <constraint firstItem="5Bu-rb-xqp" firstAttribute="top" secondItem="txZ-lp-kEW" secondAttribute="bottom" constant="8" symbolic="YES" id="ebm-S0-gWF"/>
+                                                <constraint firstItem="5Bu-rb-xqp" firstAttribute="top" secondItem="txZ-lp-kEW" secondAttribute="bottom" constant="8" id="ebm-S0-gWF"/>
                                                 <constraint firstItem="5Bu-rb-xqp" firstAttribute="leading" secondItem="txZ-lp-kEW" secondAttribute="leading" id="hJP-wE-0Vy"/>
                                                 <constraint firstItem="txZ-lp-kEW" firstAttribute="width" secondItem="Xo2-qs-HSq" secondAttribute="width" multiplier="0.554348" id="hPR-zV-kye"/>
                                                 <constraint firstItem="txZ-lp-kEW" firstAttribute="top" secondItem="E1g-sh-2cG" secondAttribute="top" id="rw3-Yl-Mj0"/>
@@ -115,7 +115,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.21568629149999999" green="0.49019610879999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.21568627450980393" green="0.49019607843137253" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="d9z-tu-3fr" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" id="3V1-5Q-OwT"/>
                                                 <constraint firstItem="rNC-UX-SE3" firstAttribute="leading" secondItem="rEU-xE-gCj" secondAttribute="leading" constant="8" id="4Ge-Jl-Zln"/>
@@ -161,7 +161,7 @@
                             <constraint firstItem="Xcz-Vs-KG0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nOT-cQ-xkV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TopPic" id="k23-gH-8Sx"/>
+                    <navigationItem key="navigationItem" title="TopPics" id="k23-gH-8Sx"/>
                     <connections>
                         <outlet property="imgUrlCollection" destination="Xcz-Vs-KG0" id="hSa-M1-G2t"/>
                     </connections>
@@ -181,7 +181,7 @@
                         <color key="backgroundColor" red="0.21568629149999999" green="0.49019610879999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.21568629149999999" green="0.49019610879999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>

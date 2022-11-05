@@ -30,8 +30,10 @@ class ImgUrGridCell: UICollectionViewCell {
     {
         imgUrImage.sd_setImage(with: URL(string: item.imageUrl ?? ""),placeholderImage: UIImage(named: "place-holder"))
         title.text = item.title
-        dateTime.text = ""
-        imageCount.text = "\(item.imagesCount ?? 0)"
+        dateTime.text = item.getFormattedDate()
+        imageCount.text = "\(item.getImgCount())"
+        self.contentView.setBorderWidth(width: 1, color: UIColor.getColorFromHex(color: theme.colors.themeMain))
+        self.contentView.setCustomRoundedCornerRadius(value: 10)
     }
     
     

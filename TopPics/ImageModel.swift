@@ -210,5 +210,15 @@ struct ImgurCellModel
     let datetime: Int?
     let imagesCount: Int?
     let imageUrl: String?
+    
+    func getFormattedDate()->String
+    {
+        return Date.getLocalDateTime(milliSeconds: Int64(datetime ?? 0))
+    }
+    
+    func getImgCount()->String
+    {
+        return "Image Count: \(imagesCount ?? 0)"
+    }
 }
 
