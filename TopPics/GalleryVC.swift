@@ -8,6 +8,8 @@
 import UIKit
 
 class GalleryVC: UIViewController {
+    
+    var 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,20 @@ class GalleryVC: UIViewController {
     }
     
 
+}
 
+//MARK: Collection view datasource and delegates
+
+extension GalleryVC:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        
+    }
 
 }
