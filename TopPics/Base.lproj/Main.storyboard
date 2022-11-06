@@ -18,8 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Here" translatesAutoresizingMaskIntoConstraints="NO" id="Hls-VP-QpR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dH1-pT-74l"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oQc-bp-x20"/>
+                                </connections>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-Vs-KG0">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ygg-yb-Ruc">
                                     <size key="itemSize" width="208" height="293"/>
@@ -155,10 +165,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.21568629149999999" green="0.49019610879999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="12N-Xr-82I"/>
-                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="41p-yN-E4r"/>
-                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d57-XW-yoN"/>
-                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nOT-cQ-xkV"/>
+                            <constraint firstItem="Hls-VP-QpR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="40C-Uk-85S"/>
+                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ac9-Hc-5kv"/>
+                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BUS-QA-ox8"/>
+                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="top" secondItem="Hls-VP-QpR" secondAttribute="bottom" id="F3y-89-892"/>
+                            <constraint firstItem="Xcz-Vs-KG0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jh0-qz-VNS"/>
+                            <constraint firstItem="Hls-VP-QpR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MD6-t0-wZx"/>
+                            <constraint firstItem="Hls-VP-QpR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="sds-kG-sKQ"/>
+                            <constraint firstItem="Hls-VP-QpR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tU3-cQ-oNf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TopPics" id="k23-gH-8Sx"/>

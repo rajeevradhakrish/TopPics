@@ -9,9 +9,11 @@ import UIKit
 
 class GalleryVC: UIViewController {
     
+    //MARK: Collection view outlet
     
     @IBOutlet weak var imgUrlCollection: UICollectionView!
     
+    //MARK: Variable declaration
     
     var imgUrList = [ImgurCellModel]()
     
@@ -25,24 +27,31 @@ class GalleryVC: UIViewController {
         }
     }
     
+   //MARK: View management
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
         setUPGridListButton()
-        loadSearchData()
+        //Fetch IMGur with default "Latest" search
+        loadSearchData(searchText: "Latest")
     }
     
-    func loadSearchData()
+    //MARK: Load IMGur images
+    
+    func loadSearchData(searchText:String)
     {
-        galleryVM.fetchAPI(VC: self, searchStr: "cat", completion: {[weak self] in
+        galleryVM.fetchAPI(VC: self, searchStr: searchText, completion: {[weak self] in
             guard let sSelf = self else {return}
             ExecuteOnMain {
                 sSelf.imgUrlCollection.reloadData()
             }
         })
     }
+    
+    //MARK: Functions
     
     func setUPGridListButton()
     {
@@ -52,6 +61,8 @@ class GalleryVC: UIViewController {
         gridListButton.addTarget(self, action: #selector(toggleGridList(sender:)), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: gridListButton)
     }
+    
+    //Toggle action
     
     @objc func toggleGridList(sender:UIButton)
     {
@@ -97,3 +108,30 @@ extension GalleryVC:UICollectionViewDelegateFlowLayout
     }
     
 }
+
+//MARK: Search bar delegates
+
+extension GalleryVC:UISearchBarDelegate
+{
+    //Show cancel button when search start
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar){
+        searchBar.showsCancelButton = true
+    }
+    
+    //Search button click handled here
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        searchBar.showsCancelButton = false
+        loadSearchData(searchText: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
+    }
+    
+    //Cancel button click handled here
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        loadSearchData(searchText: "Latest")
+        searchBar.resignFirstResponder()
+    }
+}
+
+
