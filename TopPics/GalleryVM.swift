@@ -26,10 +26,11 @@ class GalleryVM
     
     func fetchAPI(VC:UIViewController,searchStr:String, completion:@escaping ()->())
     {
+        ActivityIndicator.shared.showLoader(onView: VC.view, clearFlag: false)
         let authorization = ["Authorization":server.profile.authorization]
         NetworkCall(data: [:], headers: authorization, url: server.url.imgurUrl + searchStr , service: .posts, method: .get, isJSONRequest: false).executeQuery(){[weak self]
             (result: Result<ImgurResponse,Error>) in
-            //ActivityIndicator.shared.removeLoader()
+            ActivityIndicator.shared.removeLoader()
             guard let  sSelf = self else {return}
             switch result{
             case .success(let response):

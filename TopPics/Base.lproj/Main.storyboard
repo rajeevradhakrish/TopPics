@@ -108,7 +108,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-UX-SE3">
                                                     <rect key="frame" x="8" y="214" width="192" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -178,11 +178,41 @@
                     <navigationItem key="navigationItem" title="TopPics" id="k23-gH-8Sx"/>
                     <connections>
                         <outlet property="imgUrlCollection" destination="Xcz-Vs-KG0" id="hSa-M1-G2t"/>
+                        <segue destination="MOg-G0-2mk" kind="presentation" identifier="detail" id="cgD-TT-Xc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Image DetailVC-->
+        <scene sceneID="nkj-eG-Pl2">
+            <objects>
+                <viewController id="MOg-G0-2mk" customClass="ImageDetailVC" customModule="TopPics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OQG-0w-KYo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLp-ot-l6U">
+                                <rect key="frame" x="0.0" y="59" width="393" height="690"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oq0-4e-fBU"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.49019607840000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WLp-ot-l6U" firstAttribute="leading" secondItem="oq0-4e-fBU" secondAttribute="leading" id="5Q4-sA-C5Y"/>
+                            <constraint firstItem="WLp-ot-l6U" firstAttribute="top" secondItem="oq0-4e-fBU" secondAttribute="top" id="bf0-3G-YTo"/>
+                            <constraint firstItem="WLp-ot-l6U" firstAttribute="trailing" secondItem="oq0-4e-fBU" secondAttribute="trailing" id="d6v-xZ-9By"/>
+                            <constraint firstItem="oq0-4e-fBU" firstAttribute="bottom" secondItem="WLp-ot-l6U" secondAttribute="bottom" constant="34" id="k1U-pp-DsQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgurImage" destination="WLp-ot-l6U" id="5hc-Kk-vho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oo-Ae-hXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.5190839694656" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b0c-Yh-0EB">

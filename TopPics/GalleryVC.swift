@@ -17,6 +17,8 @@ class GalleryVC: UIViewController {
     
     var imgUrList = [ImgurCellModel]()
     
+    var selectedImg:ImgurCellModel!
+    
     var galleryVM = GalleryVM()
     
     var currentCellType:CellType = .list
@@ -70,6 +72,15 @@ class GalleryVC: UIViewController {
         currentCellType = sender.isSelected ? .grid : .list
     }
     
+    //MARK: Prepare for segue,passing url data to next screen
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? ImageDetailVC
+        {
+            dest.imageUrl = selectedImg.imageUrl ?? ""
+        }
+    }
+    
 }
 
 //MARK: Collection view datasource and delegates
@@ -84,6 +95,12 @@ extension GalleryVC:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         galleryVM.getImgUrCell(collection: collectionView, index: indexPath, type: currentCellType)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedImg = galleryVM.imgurArr[indexPath.row]
+        //Open image in Image detail VC
+        performSegue(withIdentifier: "detail", sender: self)
     }
 }
 
