@@ -10,7 +10,7 @@ import Foundation
 struct server{
     struct url
     {
-        //Url to fecth top images of week
+        //Url to fecth top images of week 
         static let imgurUrl = "https://api.imgur.com/3/gallery/search/top/week?q_type=jpg&q="
     }
     struct endPoints
