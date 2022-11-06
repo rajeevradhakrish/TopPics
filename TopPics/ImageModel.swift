@@ -213,7 +213,7 @@ struct ImgurCellModel
     
     func getFormattedDate()->String
     {
-        return Date.getLocalDateTime(milliSeconds: Int64(datetime ?? 0))
+        return Date.getLocalDateTime(milliSeconds: datetime ?? 0)
     }
     
     func getImgCount()->String

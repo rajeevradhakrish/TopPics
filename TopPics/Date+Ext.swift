@@ -12,15 +12,15 @@ extension Date {
         Int64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
     
-    init(milliseconds:Int64) {
-        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+    init(milliseconds:Int) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds))
     }
     
-    static func getLocalDateTime(milliSeconds:Int64)->String
+    static func getLocalDateTime(milliSeconds:Int)->String
     {
         let df = DateFormatter()
         let time = Date(milliseconds: milliSeconds)
-        df.dateFormat = "y-MM-dd H:mm:ss.SSSS"
+        df.dateFormat = "dd/MM/yy hh:mm a"
         return df.string(from: time)
     }
 }

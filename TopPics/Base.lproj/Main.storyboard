@@ -46,13 +46,13 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-rb-xqp">
                                                     <rect key="frame" x="149" y="73" width="164" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-JW-7jl">
                                                     <rect key="frame" x="149" y="101" width="164" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -103,14 +103,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcp-nU-9CE">
-                                                    <rect key="frame" x="8" y="240" width="164" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                                    <rect key="frame" x="8" y="240" width="192" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-50-lym">
-                                                    <rect key="frame" x="8" y="264" width="164" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                                    <rect key="frame" x="8" y="259" width="192" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -129,10 +129,10 @@
                                                 <constraint firstItem="mH9-50-lym" firstAttribute="leading" secondItem="kcp-nU-9CE" secondAttribute="leading" id="QPa-cp-Jwu"/>
                                                 <constraint firstItem="d9z-tu-3fr" firstAttribute="height" secondItem="rEU-xE-gCj" secondAttribute="height" multiplier="0.703072" id="RGm-ye-X06"/>
                                                 <constraint firstAttribute="trailing" secondItem="d9z-tu-3fr" secondAttribute="trailing" id="bgg-B8-6Lq"/>
-                                                <constraint firstItem="mH9-50-lym" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" multiplier="0.788462" id="giW-Ao-rSI"/>
-                                                <constraint firstItem="kcp-nU-9CE" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" multiplier="0.788462" id="mCk-La-9F0"/>
+                                                <constraint firstItem="mH9-50-lym" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" multiplier="0.788462" constant="27.999904000000015" id="giW-Ao-rSI"/>
+                                                <constraint firstItem="kcp-nU-9CE" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" multiplier="0.788462" constant="27.999904000000015" id="mCk-La-9F0"/>
                                                 <constraint firstItem="rNC-UX-SE3" firstAttribute="width" secondItem="rEU-xE-gCj" secondAttribute="width" multiplier="0.923077" id="mrH-QA-q8a"/>
-                                                <constraint firstItem="mH9-50-lym" firstAttribute="top" secondItem="kcp-nU-9CE" secondAttribute="bottom" constant="3" id="qDk-2K-CqL"/>
+                                                <constraint firstItem="mH9-50-lym" firstAttribute="top" secondItem="kcp-nU-9CE" secondAttribute="bottom" constant="-2" id="qDk-2K-CqL"/>
                                                 <constraint firstItem="mH9-50-lym" firstAttribute="height" secondItem="rEU-xE-gCj" secondAttribute="height" multiplier="0.0716724" id="wZp-ug-oeh"/>
                                             </constraints>
                                         </collectionViewCellContentView>

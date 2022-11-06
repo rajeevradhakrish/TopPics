@@ -13,7 +13,7 @@ import UIKit
 enum CellType {
 case list,grid
 }
-//MARK: View model for gallery page
+//MARK: View model for gallery page(GalleryVC)
 
 class GalleryVM
 {
@@ -33,9 +33,13 @@ class GalleryVM
             guard let  sSelf = self else {return}
             switch result{
             case .success(let response):
+                
+                //Getting the data fetched from IMGur and converting to ImgurCellModel
+                //Sorting the arra in reverse chronological order
+                
                 if let imgUrDataTemp = response.data
                 {
-                    sSelf.imgurArr = imgUrDataTemp.map({ImgurCellModel(id: $0.id, title: $0.title, datetime: $0.datetime, imagesCount: $0.imagesCount, imageUrl: $0.images?.first?.link ?? "")})
+                    sSelf.imgurArr = imgUrDataTemp.map({ImgurCellModel(id: $0.id, title: $0.title, datetime: $0.datetime, imagesCount: $0.imagesCount, imageUrl: $0.images?.first?.link ?? "")}).sorted(by: {Date(milliseconds: $0.datetime ?? 0) > Date(milliseconds: $1.datetime ?? 0)})
                 }
                 
                 completion()
