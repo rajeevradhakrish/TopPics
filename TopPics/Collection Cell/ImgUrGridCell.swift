@@ -10,11 +10,11 @@ import SDWebImage
 
 class ImgUrGridCell: UICollectionViewCell {
     
-    //Cell identifier
+    //MARK: Cell identifier
     
     static let cellIdentifier = "grid"
     
-    //Outlets declaration
+    //MARK: Outlets declaration
     
     @IBOutlet weak var imgUrImage: UIImageView!
     

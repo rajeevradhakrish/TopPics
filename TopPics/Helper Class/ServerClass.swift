@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+//Helper Class which manages all the server api calls
+
 class NetworkCall : NSObject{
 
     enum services :String{

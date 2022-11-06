@@ -15,7 +15,6 @@ final class ValidateImgurData: XCTestCase {
     override func setUp() {
         super.setUp()
         testVM = GalleryVM()
-        
     }
     
     override func tearDown() {

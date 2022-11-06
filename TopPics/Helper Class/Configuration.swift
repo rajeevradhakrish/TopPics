@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Configuration of the app including urls and theme.
 struct server{
     struct url
     {

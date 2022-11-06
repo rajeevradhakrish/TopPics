@@ -11,7 +11,7 @@ class ImgUrListCell: UICollectionViewCell {
     
     static let cellIdentifier = "list"
     
-    //Outlets declaration
+    //MARK: Outlets declaration
     
     @IBOutlet weak var imgUrImage: UIImageView!
     
