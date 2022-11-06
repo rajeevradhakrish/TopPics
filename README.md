@@ -26,6 +26,11 @@ Third party Libraries used
   pod 'NVActivityIndicatorView' Progress Indicator
   pod 'SCLAlertView' Alert message
 
+![image](https://user-images.githubusercontent.com/19264913/200165240-2866b584-9d5e-4c7a-b8c5-2c6b10947186.png)
+![image](https://user-images.githubusercontent.com/19264913/200165253-140b9216-d5a3-494a-8c8b-c3debbaaac56.png)
+![image](https://user-images.githubusercontent.com/19264913/200165261-735e0c5e-8205-458a-b036-cfba99f517ef.png)
+![image](https://user-images.githubusercontent.com/19264913/200165275-dc078049-6905-4f78-9e7c-27e4c6ab18a2.png)
+![image](https://user-images.githubusercontent.com/19264913/200165285-c3098926-f7a9-4a81-b08d-907043dbef54.png)
 
 
 
