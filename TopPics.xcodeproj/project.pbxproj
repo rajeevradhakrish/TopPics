@@ -159,20 +159,12 @@
 			children = (
 				7B798B382916AC0800A81D54 /* AppDelegate.swift */,
 				7B798B3A2916AC0800A81D54 /* SceneDelegate.swift */,
-				7B798B6B2916B93500A81D54 /* GalleryVC.swift */,
-				7B798B8329179FE800A81D54 /* ImageDetailVC.swift */,
-				7B798B6D2916B97300A81D54 /* Configuration.swift */,
-				7B798B6F2916BDAD00A81D54 /* ServerClass.swift */,
-				7B798B712916C34300A81D54 /* ImageModel.swift */,
-				7B798B732916C8AC00A81D54 /* GalleryVM.swift */,
-				7B798B752916CB4700A81D54 /* AlertManager.swift */,
-				7B798B852917A9DE00A81D54 /* ActivityIndicator.swift */,
-				7B798B772916E11C00A81D54 /* ImgUrListCell.swift */,
-				7B798B792916E12B00A81D54 /* ImgUrGridCell.swift */,
-				7B798B7B2916E8F500A81D54 /* DispatchQue+Ext.swift */,
-				7B798B7D2916F24C00A81D54 /* UIView+Ext.swift */,
-				7B798B7F2916F35900A81D54 /* UIColor+Ext.swift */,
-				7B798B812916FCB900A81D54 /* Date+Ext.swift */,
+				7B798B872917AAEC00A81D54 /* Controllers */,
+				7B798B8A2917AB8B00A81D54 /* Helper Class */,
+				7B798B892917AB7100A81D54 /* Model */,
+				7B798B882917AB0500A81D54 /* View Model */,
+				7B798B8B2917AB9B00A81D54 /* Collection Cell */,
+				7B798B8C2917ABC500A81D54 /* Extension */,
 				7B798B3E2916AC0800A81D54 /* Main.storyboard */,
 				7B798B442916AC0900A81D54 /* Assets.xcassets */,
 				7B798B462916AC0900A81D54 /* LaunchScreen.storyboard */,
@@ -197,6 +189,62 @@
 				7B798B5E2916AC0900A81D54 /* TopPicsUITestsLaunchTests.swift */,
 			);
 			path = TopPicsUITests;
+			sourceTree = "<group>";
+		};
+		7B798B872917AAEC00A81D54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B6B2916B93500A81D54 /* GalleryVC.swift */,
+				7B798B8329179FE800A81D54 /* ImageDetailVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7B798B882917AB0500A81D54 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B732916C8AC00A81D54 /* GalleryVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		7B798B892917AB7100A81D54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B712916C34300A81D54 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B798B8A2917AB8B00A81D54 /* Helper Class */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B6D2916B97300A81D54 /* Configuration.swift */,
+				7B798B6F2916BDAD00A81D54 /* ServerClass.swift */,
+				7B798B752916CB4700A81D54 /* AlertManager.swift */,
+				7B798B852917A9DE00A81D54 /* ActivityIndicator.swift */,
+			);
+			path = "Helper Class";
+			sourceTree = "<group>";
+		};
+		7B798B8B2917AB9B00A81D54 /* Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B772916E11C00A81D54 /* ImgUrListCell.swift */,
+				7B798B792916E12B00A81D54 /* ImgUrGridCell.swift */,
+			);
+			path = "Collection Cell";
+			sourceTree = "<group>";
+		};
+		7B798B8C2917ABC500A81D54 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B798B7B2916E8F500A81D54 /* DispatchQue+Ext.swift */,
+				7B798B7D2916F24C00A81D54 /* UIView+Ext.swift */,
+				7B798B7F2916F35900A81D54 /* UIColor+Ext.swift */,
+				7B798B812916FCB900A81D54 /* Date+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		CFEC2D8BF64E9957870BD361 /* Frameworks */ = {
