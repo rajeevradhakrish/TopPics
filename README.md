@@ -8,6 +8,7 @@ It comes with a gallery with grid and list layout that can be toggled.
 Top images of the week will be available in the gallery.
 Users can search their topics with the search functionality provided.
 Users will be also able to view the images when they click on it.
+Initially the images fetched are for "Latest" ,users can search their choice in the search bar.
 
 How to install
 
